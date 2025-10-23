@@ -1,134 +1,126 @@
-<!doctype html>
-<html lang="es">
+<!DOCTYPE html>
+<html>
   <head>
-    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Plantilla HTML - Página básica</title>
-    <meta name="description" content="Una plantilla HTML responsiva y limpia para empezar un proyecto." />
-
-    <!-- Tip: reemplaza o añade tus propias fuentes aquí -->
-    <style>
-      :root{
-        --bg:#ffffff;
-        --card:#f7f8fb;
-        --accent:#2563eb;
-        --muted:#6b7280;
-        --radius:12px;
-        --max-width:1100px;
-        font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-        color-scheme: light;
-      }
-      *{box-sizing:border-box}
-      body{margin:0;background:var(--bg);color:#111;line-height:1.5}
-      .container{max-width:var(--max-width);margin:36px auto;padding:0 20px}
-
-      header{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
-      .brand{display:flex;align-items:center;gap:12px}
-      .logo{width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,#60a5fa,#2563eb);display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
-      nav ul{display:flex;gap:14px;list-style:none;margin:0;padding:0}
-      nav a{text-decoration:none;color:var(--muted);font-weight:600}
-      nav a.cta{background:var(--accent);color:white;padding:8px 12px;border-radius:8px}
-
-      .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;margin-top:24px}
-      .hero h1{font-size:clamp(24px,4vw,40px);margin:0}
-      .hero p{color:var(--muted);margin-top:12px}
-      .card{background:var(--card);padding:18px;border-radius:var(--radius);box-shadow:0 6px 18px rgba(16,24,40,0.06)}
-
-      .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:24px}
-      .feature{padding:14px;border-radius:10px;background:white;border:1px solid #eef2ff}
-      .feature h3{margin:0 0 8px 0}
-      .feature p{margin:0;color:var(--muted)}
-
-      footer{margin-top:40px;padding:18px 0;border-top:1px solid #f1f5f9;color:var(--muted);font-size:14px}
-
-      /* responsive */
-      @media (max-width:880px){
-        .hero{grid-template-columns:1fr}
-        .logo{width:40px;height:40px}
-      }
-    </style>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="styleguide.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container">
-      <header>
-        <div class="brand">
-          <div class="logo">PD</div>
-          <div>
-            <strong>Proyecto</strong>
-            <div style="font-size:13px;color:var(--muted)">Plantilla HTML</div>
-          </div>
+    <div class="home">
+      <img class="heart" src="img/heart-2.svg" />
+      <button class="button">
+        <div class="content">
+          <div class="state-layer"><div class="label">Ver Producto</div></div>
         </div>
-
-        <nav>
-          <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#features">Características</a></li>
-            <li><a href="#about">Acerca</a></li>
-            <li><a class="cta" href="#">Comenzar</a></li>
-          </ul>
-        </nav>
-      </header>
-
-      <main>
-        <section class="hero">
-          <div>
-            <h1>Una plantilla HTML simple, responsiva y lista para personalizar</h1>
-            <p>Empieza con esta estructura mínima: header, hero, secciones de características y footer. Reemplaza colores, fuentes y contenido según tu necesidad.</p>
-
-            <div class="features" id="features">
-              <div class="feature card">
-                <h3>Ligera</h3>
-                <p>HTML y CSS puros, sin dependencias externas. Fácil de clonar y adaptar.</p>
-              </div>
-              <div class="feature card">
-                <h3>Responsiva</h3>
-                <p>Diseño con rejillas y medidas fluidas para verse bien en móviles y escritorios.</p>
-              </div>
-              <div class="feature card">
-                <h3>Lista para integrar</h3>
-                <p>Puedes añadir frameworks, scripts o conectar al backend sin reestructurar.</p>
-              </div>
+      </button>
+      <div class="rectangle"></div>
+      <div class="div"></div>
+      <div class="bottom-app-bar">
+        <div class="leading-icon">
+          <div class="icon">
+            <div class="container">
+              <div class="icon-wrapper"><img class="img" src="img/icon-5.svg" /></div>
             </div>
           </div>
-
-          <aside class="card">
-            <h4>Detalles rápidos</h4>
-            <ul style="margin:10px 0 0 18px;color:var(--muted)">
-              <li>Archivo: <code>index.html</code></li>
-              <li>Compatibilidad: navegadores modernos</li>
-              <li>Tamaño: muy ligero</li>
-            </ul>
-
-            <div style="margin-top:14px">
-              <a href="#about" style="text-decoration:none;padding:10px 14px;border-radius:8px;border:1px solid var(--accent);font-weight:600">Ver más</a>
-            </div>
-          </aside>
-        </section>
-
-        <section id="about" style="margin-top:28px">
-          <div class="card">
-            <h2>Acerca de esta plantilla</h2>
-            <p style="color:var(--muted);margin-top:8px">Utiliza esta base para prototipos, páginas de aterrizaje o proyectos escolares. Contiene comentarios para orientarte sobre dónde añadir componentes, hojas de estilo externas o scripts.</p>
-
-            <h3 style="margin-top:14px">Cómo personalizar</h3>
-            <ol style="color:var(--muted)">
-              <li>Cambia los colores en <code>:root</code> para ajustar la paleta.</li>
-              <li>Sustituye la tipografía por Google Fonts o tu fuente preferida.</li>
-              <li>Integra un framework (Bootstrap/Tailwind) si necesitas utilidades rápidas.</li>
-            </ol>
-          </div>
-        </section>
-
-      </main>
-
-      <footer>
-        <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
-          <div>© {new Date().getFullYear ? new Date().getFullYear() : '2025'} — Tu proyecto</div>
-          <div style="color:var(--muted)">Hecha con ❤️ — Personalízala a tu gusto</div>
         </div>
-      </footer>
+        <div class="FAB-elevation"></div>
+      </div>
+      <div class="rectangle-2"></div>
+      <div class="text-wrapper">Nuevas colecciones</div>
+      <div class="combat-medic-pro">Combat Medic Pro <br />Smartch</div>
+      <div class="text-wrapper-2">Marca</div>
+      <button class="content-wrapper">
+        <div class="content">
+          <div class="state-layer"><div class="label">Ver Producto</div></div>
+        </div>
+      </button>
+      <div class="navigation-bar">
+        <div class="nav-item">
+          <div class="icon-container">
+            <div class="state-layer-2">
+              <img class="icon-2" src="img/icon-5.png" /> <img class="img" src="img/icon-8.svg" />
+            </div>
+          </div>
+          <div class="label-text">Relojes</div>
+        </div>
+        <div class="nav-item">
+          <div class="state-layer-wrapper">
+            <div class="state-layer-3">
+              <img class="icon-3" src="img/icon.png" /> <img class="icon-4" src="img/icon-7.svg" />
+            </div>
+          </div>
+          <div class="label-text-2">Ropa</div>
+        </div>
+        <div class="nav-item">
+          <div class="state-layer-wrapper">
+            <div class="state-layer-3">
+              <img class="icon-5" src="img/icon-4.png" /> <img class="icon-4" src="img/icon.svg" />
+            </div>
+          </div>
+          <div class="label-text-2">Accesorios</div>
+        </div>
+        <div class="nav-item">
+          <div class="state-layer-wrapper">
+            <div class="state-layer-3">
+              <img class="icon-6" src="img/image.png" /> <img class="icon-4" src="img/image.svg" />
+            </div>
+          </div>
+          <div class="label-text-2">Carrito</div>
+        </div>
+      </div>
+      <div class="text-wrapper-3">Buscar productos</div>
+      <img class="image" src="img/image-1.png" />
+      <img class="heart-2" src="img/heart-3.svg" />
+      <div class="text-wrapper-4">Reloj Condotti Occupato</div>
+      <div class="text-wrapper-5">Marca</div>
+      <div class="rectangle-3"></div>
+      <div class="rectangle-3"></div>
+      <div class="text-wrapper-6">Reloj de pulsera personalizado</div>
+      <div class="text-wrapper-7">Marca</div>
+      <button class="div-wrapper">
+        <div class="content">
+          <div class="state-layer"><div class="label">Ver Producto</div></div>
+        </div>
+      </button>
+      <img class="image-2" src="img/image-2.png" />
+      <img class="heart-3" src="img/heart.svg" />
+      <img class="image-3" src="img/image-3.png" />
+      <div class="navigation-bar-2">
+        <div class="nav-item">
+          <div class="state-layer-wrapper">
+            <div class="state-layer-3">
+              <img class="icon-7" src="img/icon-7.png" /> <img class="icon-4" src="img/icon-6.svg" />
+            </div>
+          </div>
+          <div class="label-text-3">Inicio</div>
+        </div>
+        <div class="nav-item">
+          <div class="state-layer-wrapper">
+            <div class="state-layer-3">
+              <img class="icon-8" src="img/icon-3.png" /> <img class="icon-4" src="img/icon-3.svg" />
+            </div>
+          </div>
+          <div class="label-text-3">Carrito</div>
+        </div>
+        <div class="nav-item">
+          <div class="state-layer-wrapper">
+            <div class="state-layer-3">
+              <img class="icon-9" src="img/icon-6.png" /> <img class="icon-4" src="img/icon-4.svg" />
+            </div>
+          </div>
+          <div class="label-text-3">Perfil</div>
+        </div>
+        <div class="nav-item">
+          <div class="state-layer-wrapper">
+            <div class="state-layer-3">
+              <img class="icon-10" src="img/icon-2.png" /> <img class="icon-4" src="img/icon-2.svg" />
+            </div>
+          </div>
+          <div class="label-text-3">Buscar</div>
+        </div>
+      </div>
     </div>
-
-    <!-- SCRIPTS: añade aquí tus scripts. Ejemplo: <script src="app.js"></script> -->
   </body>
 </html>
